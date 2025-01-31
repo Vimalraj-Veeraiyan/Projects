@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.bgimage {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    filter: brightness(30%);
+}
+
+.register {
+    height: 600px;
+    width: 600px;
+    background-color: rgba(58, 12, 119, 0.5);
+    border-radius: 30px;
+    margin: 10px auto;
+}
+
+.register form {
+    height: 300px;
+    width: 600px;
+    padding-top: 20px;
+}
+
+.register form .infodiv {
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    height: 300px;
+    width: 600px;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: 40px 40px;
+    align-content: space-around;
+}
+
+.register form .infodiv label {
+    font-size: 30px;
+    margin-left: 30px;
+}
+
+.register form .infodiv input {
+    float: right;
+    margin-right: 40px;
+    font-size: 20px;
+    border-radius: 30px;
+    padding-left: 30px;
+}
+
+.register form .btns {
+    height: 50px;
+    width: 600px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.register form .btns input {
+    width: fit-content;
+    height: fit-content;
+    padding: 10px;
+    border-radius: 30px;
+    font-size: 20px;
+    box-shadow: 0 0 10px black;
+    background-color: blue;
+    color: white;
+    transition: background-color 500ms linear,
+                color 500ms linear,
+                box-shadow 500ms linear;
+}
+
+.register form .btns input:hover {
+    box-shadow: 0 0 0px black;
+    background-color: white;
+    color: blue;
+}
+
+footer .copyright {
+    font-size: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+footer {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 14px;
+}
+
+#register-page-paran {
+    margin-top: 60px;
+}

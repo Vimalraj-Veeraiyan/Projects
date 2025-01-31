@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian Railways</title>
+    
+    <link rel="icon" type="image/x-icon" href="./img/logo.ico">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .home {
+            position: relative;
+            height: 729px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .menubox {
+            cursor: pointer;
+            position: absolute;
+            top: 25px;
+            right: 20px;
+        }
+
+        .menubox h1 {
+            font-size: 30px;
+            background-color: rgb(255, 255, 255);
+            color: rgb(80, 13, 206);
+            border-radius: 20px;
+            height: fit-content;
+            width: fit-content;
+            padding: 8px;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        .main {
+            height: 200px;
+            width: 100%;
+        }
+
+        .main #h1 {
+            color: white;
+            text-align: center;
+            font-size: 60px;
+            padding-top: 100px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        #slogan {
+            color: white;
+            font-size: 30px;
+            text-align: center;
+            font-style: italic;
+            margin-top: 30px;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .pop-window {
+            height: 729px;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            display: none;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .cross {
+            font-size: 40px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            color: rgb(13, 0, 255);
+            background-color: rgb(255, 255, 255);
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
+        .message {
+            height: 300px;
+            width: 600px;
+            background-color: rgba(7, 60, 220, 0.9);
+            position: relative;
+            border-radius: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .message .message-content {
+            font-size: 50px;
+            color: white;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            display: block;
+        }
+
+        .message .message-content a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .backImg {
+            position: absolute;
+            top: 0;
+            z-index: -1;
+            filter: brightness(40%);
+        }
+
+        .irlogodiv {
+            height: 100px;
+            width: 100%;
+            position: absolute;
+            display: flex;
+            justify-content: center;
+        }
+
+        .irlogo {
+            padding: 10px;
+            filter: drop-shadow(0 0 20px white);
+        }
+
+       
+
+        .description {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .description h1 {
+            color: white;
+            font-family:'Courier New', Courier, monospace;
+            font-size: 30px;
+        }
+
+        .description h2 {
+            color: white;
+            padding: 20px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: 20px;
+        }
+
+        footer {
+            position: absolute;
+            top:850px;
+            height: 100px;
+            width: 100%;
+            background-image: linear-gradient(blue, rgb(4, 123, 30), blue);
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            color: white;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        footer img {
+            filter: drop-shadow(0 0 5px white);
+        }
+    </style>
+    <script>
+        function popup() {
+            document.getElementById('home').style.filter = 'blur(3px)';
+            document.getElementById('imgs').style.filter = 'blur(3px)';
+            document.getElementById('description').style.filter = 'blur(3px)';
+            document.getElementById('pop-window').style.display = 'flex';
+            
+        }
+
+        function closePopWindow() {
+            document.getElementById('home').style.filter = 'blur(0px)';
+            document.getElementById('imgs').style.filter = 'blur(0px)';
+            document.getElementById('description').style.filter = 'blur(0px)';
+            document.getElementById('pop-window').style.display = 'none';
+        }
+    </script>
+</head>
+<body>
+    <div id="imgs">
+        <img src="./img/bg5.jpg" alt="" width="100%" class="backImg">
+        <div class="irlogodiv">
+            <img src="./img/indianRailways.png" alt="" height="300px" class="irlogo">
+        </div>
+    </div>
+    
+    <div class="home" id="home">
+        <div class="menubox" id="menu" onclick="popup()">
+            <h1><img src="./img/indianRailways.png" alt="" height="23px">Menu</h1>
+        </div>
+        <div class="main">
+            <h1 id="h1">Welcome to Indian Railways <br></h1>
+            <h2 id="slogan"><q>Lifeline of the Nation</q></h2>
+        </div>
+    </div>
+    <div class="description" id="description">
+        <h1><q><b>Safe</b> and <b>Fast</b> Train Services at Affordable Cost</q></h1>
+        <h2>Click on the <a href="#menu" style="text-decoration: none; color: green;">Menu</a> to Login or Register</h2>
+    </div>
+    <div class="pop-window" id="pop-window">
+        <div class="message">
+            <h1 class="cross" id="cross" onclick="closePopWindow()">X</h1>
+            <h1 class="message-content"><a href="./Login_Page.php">Login</a></h1>
+            <br><br><br>
+            <h1 class="message-content"><a href="./Register_Page.php">Register</a></h1>
+        </div>
+    </div>
+    <br><br><br>
+    <footer>
+        <h1>&copy; Indian Railways 2024</h1>
+        <img src="./img/indianRailways.png" alt="" height="90px">
+        <h1>All Rights Reserved</h1>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,185 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    height: 250px;
+    width: 100%;
+    background-color: rgb(12, 12, 24);
+    display: flex;
+}
+
+header .logo {
+    height: 250px;
+    width: fit-content;
+}
+
+header .title {
+    height: 250px;
+    flex-grow: 1;
+    background-color: rgb(51, 0, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-image: linear-gradient(blueviolet, blue, blueviolet);
+}
+
+header .title h1 {
+    font-size: 100px;
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    z-index: 2;
+    margin-right: 200px;
+}
+
+header .title img {
+    position: absolute;
+    top: 50px;
+    right: 0px;
+    z-index: 1;
+    filter: drop-shadow(0 0 5px white);
+}
+
+header .title .menudiv {
+    width: 100%;
+    height: 50px;
+    background-color: blueviolet;
+    z-index: 3;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+header .title .menudiv a{
+    text-decoration: none;
+    font-size: 30px;
+    color: white;
+    padding-top: 8px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+header .title .menudiv a:hover div {
+    display: block;
+}
+
+header .title .menudiv a div {
+    width: fit-content;
+    height: fit-content;
+    background-color: red;
+    color: white;
+    position: absolute;
+    margin-top: 8px;
+    padding: 8px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 0 0 20px red;
+    display: none;
+}
+
+header .title .menudiv a div:hover {
+    display: block;
+}
+
+.home {
+    height: 700px;
+    width: 100%;
+    background-color: rgb(38, 11, 62);
+}
+
+.image-row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    padding: 10px;
+    background-image: linear-gradient(rgb(5, 5, 33), blueviolet, rgb(5, 5, 33));
+
+}
+
+.image-row img {
+    width: 100%;
+    max-width: 24%;
+    height: auto;
+    flex: 1;
+    margin: 0 5px;
+}
+
+@media (max-width: 600px) {
+    .image-row img {
+        max-width: 48%;
+    }
+}
+
+@media (max-width: 400px) {
+    .image-row img {
+        max-width: 98%;
+    }
+}
+
+.home .description {
+    height: 940px;
+    width: 100%;
+    background-image: linear-gradient(blue, blueviolet, blue);
+}
+
+.home .description #h1 {
+    text-align: center;
+    color: white;
+    font-size: 40px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.home .description #slogan {
+    text-align: center;
+    color: white;
+    font-style: italic;
+}
+
+.home .description #slogan2 {
+    text-align: center;
+    color: white;
+}
+
+.home .description .des {
+    font-size: 28px;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+footer {
+    position: absolute;
+    top: 1735px;
+    height: 100px;
+    width: 100%;
+    background-color: black;
+    background-image: linear-gradient(blue, rgb(4, 123, 30), blue);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+}
+
+#icons {
+    height: 40px;
+    width: 40px;
+    margin: 5px 10px;
+    font-size: 20px;
+    text-align: center;
+    align-content: center;
+    border-radius: 50%;
+    
+}
+
+#icons:hover {
+    color: black;
+}
+
+footer img {
+    filter: drop-shadow(0 0 5px white);
+}

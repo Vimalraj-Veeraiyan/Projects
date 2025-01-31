@@ -1,0 +1,9 @@
+1. run the wampserver and then go to phpMyAdmin and extract the IR folder into the www folder of wampserver
+
+2. create a new database name "indianrailways"
+
+3. click on the "Import" button at the top of the page and import "indianrailways.sql" from the DATABASE folder
+
+4. open the index.html using local host and you need to login or register (if you are new) first to access the main pages like home, check available trains, booking tickets and cancelling tickets so first you have to login.
+
+5. Done!
